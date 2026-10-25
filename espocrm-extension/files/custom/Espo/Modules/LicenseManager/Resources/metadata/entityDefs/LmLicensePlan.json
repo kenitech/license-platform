@@ -1,0 +1,193 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 200
+        },
+        "application": {
+            "type": "link",
+            "required": true
+        },
+        "planCode": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9._\\-]{1,63}$",
+            "tooltip": true
+        },
+        "licenseType": {
+            "type": "enum",
+            "options": [
+                "lifetime",
+                "fixed_term",
+                "trial",
+                "subscription"
+            ],
+            "default": "lifetime",
+            "required": true
+        },
+        "durationValue": {
+            "type": "int",
+            "min": 1,
+            "max": 1000
+        },
+        "durationUnit": {
+            "type": "enum",
+            "options": [
+                "days",
+                "months",
+                "years"
+            ],
+            "default": "years"
+        },
+        "renewalPolicy": {
+            "type": "enum",
+            "options": [
+                "none",
+                "manual",
+                "automatic"
+            ],
+            "default": "none"
+        },
+        "maxDevices": {
+            "type": "int",
+            "min": 1,
+            "max": 1000,
+            "default": 1,
+            "required": true
+        },
+        "price": {
+            "type": "currency",
+            "min": 0
+        },
+        "transferPolicy": {
+            "type": "enum",
+            "options": [
+                "self_service",
+                "limited_per_year",
+                "support_only",
+                "not_transferable"
+            ],
+            "default": "self_service"
+        },
+        "transfersPerYear": {
+            "type": "int",
+            "min": 1,
+            "max": 100
+        },
+        "offlineGracePeriod": {
+            "type": "int",
+            "min": 0,
+            "max": 365,
+            "default": 0,
+            "tooltip": true
+        },
+        "paymentGracePeriod": {
+            "type": "int",
+            "min": 0,
+            "max": 90,
+            "default": 0,
+            "tooltip": true
+        },
+        "entitlements": {
+            "type": "array",
+            "tooltip": true,
+            "noEmptyString": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Active",
+                "Archived"
+            ],
+            "default": "Active",
+            "style": {
+                "Archived": "default",
+                "Active": "success"
+            }
+        },
+        "hasLicenses": {
+            "type": "bool",
+            "readOnly": true,
+            "tooltip": true
+        },
+        "description": {
+            "type": "text"
+        },
+        "syncStatus": {
+            "type": "enum",
+            "options": [
+                "Pending",
+                "Synced",
+                "Error"
+            ],
+            "default": "Pending",
+            "readOnly": true,
+            "style": {
+                "Pending": "warning",
+                "Synced": "success",
+                "Error": "danger"
+            }
+        },
+        "syncMessage": {
+            "type": "text",
+            "readOnly": true
+        },
+        "lastSyncedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        }
+    },
+    "links": {
+        "application": {
+            "type": "belongsTo",
+            "entity": "LmApplication",
+            "foreign": "plans"
+        },
+        "licenses": {
+            "type": "hasMany",
+            "entity": "LmLicense",
+            "foreign": "plan"
+        },
+        "orderItems": {
+            "type": "hasMany",
+            "entity": "LmOrderItem",
+            "foreign": "plan"
+        },
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc",
+        "textFilterFields": [
+            "name",
+            "planCode"
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "labels": {
+        "Create LmOrderItem": "Add Product"
+    },
+    "fields": {
+        "name": "Name",
+        "order": "Order",
+        "plan": "License Plan",
+        "quantity": "Quantity",
+        "unitPrice": "Unit Price",
+        "amount": "Amount",
+        "issuedCount": "Issued"
+    },
+    "links": {
+        "order": "Order",
+        "plan": "License Plan"
+    },
+    "tooltips": {
+        "unitPrice": "Defaults to the plan price."
+    }
+}

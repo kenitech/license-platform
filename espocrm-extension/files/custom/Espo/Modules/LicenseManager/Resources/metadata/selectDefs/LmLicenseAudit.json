@@ -1,0 +1,5 @@
+{
+    "primaryFilterClassNameMap": {
+        "failures": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicenseAudit\\PrimaryFilters\\Failures"
+    }
+}

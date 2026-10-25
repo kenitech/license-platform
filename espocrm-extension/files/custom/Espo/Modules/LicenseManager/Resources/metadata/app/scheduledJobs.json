@@ -1,0 +1,6 @@
+{
+    "LicenseManagerSync": {
+        "name": "License Manager: Sync with License Server",
+        "jobClassName": "Espo\\Modules\\LicenseManager\\Jobs\\SyncWithLicenseServer"
+    }
+}

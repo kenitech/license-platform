@@ -1,0 +1,60 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "productIdentifier"
+                }
+            ],
+            [
+                {
+                    "name": "currentVersion"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "supportedOperatingSystems"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "offlinePolicy"
+                },
+                {
+                    "name": "offlineCheckDays"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ]
+    },
+    {
+        "label": "License Server",
+        "rows": [
+            [
+                {
+                    "name": "syncStatus"
+                },
+                {
+                    "name": "lastSyncedAt"
+                }
+            ],
+            [
+                {
+                    "name": "syncMessage"
+                }
+            ]
+        ]
+    }
+]

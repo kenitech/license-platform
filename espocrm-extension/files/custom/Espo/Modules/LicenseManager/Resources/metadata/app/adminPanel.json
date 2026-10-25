@@ -1,0 +1,15 @@
+{
+    "licenseManager": {
+        "label": "License Manager",
+        "itemList": [
+            {
+                "url": "#Admin/licenseManager",
+                "label": "License Manager",
+                "iconClass": "fas fa-key",
+                "description": "licenseManager",
+                "view": "license-manager:views/admin/license-manager"
+            }
+        ],
+        "order": 60
+    }
+}

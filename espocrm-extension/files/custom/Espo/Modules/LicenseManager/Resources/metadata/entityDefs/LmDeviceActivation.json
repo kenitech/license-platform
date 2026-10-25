@@ -1,0 +1,116 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 200
+        },
+        "serverId": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 36,
+            "index": true,
+            "layoutAvailabilityList": []
+        },
+        "license": {
+            "type": "link",
+            "readOnly": true
+        },
+        "account": {
+            "type": "link",
+            "readOnly": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "active",
+                "released"
+            ],
+            "readOnly": true,
+            "style": {
+                "active": "success",
+                "released": "default"
+            }
+        },
+        "deviceFingerprint": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 16,
+            "tooltip": true
+        },
+        "operatingSystem": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 100
+        },
+        "appVersion": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 50
+        },
+        "activatedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "lastSeenAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "releasedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "releaseKind": {
+            "type": "enum",
+            "options": [
+                "",
+                "self_transfer",
+                "assisted_transfer",
+                "admin_release",
+                "lost_device",
+                "release_all"
+            ],
+            "readOnly": true
+        },
+        "serverRev": {
+            "type": "int",
+            "readOnly": true,
+            "layoutAvailabilityList": []
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "licenseServerId": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 36,
+            "index": true,
+            "layoutAvailabilityList": []
+        }
+    },
+    "links": {
+        "license": {
+            "type": "belongsTo",
+            "entity": "LmLicense",
+            "foreign": "deviceActivations"
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "lmDeviceActivations"
+        }
+    },
+    "collection": {
+        "orderBy": "activatedAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "deviceFingerprint"
+        ]
+    }
+}

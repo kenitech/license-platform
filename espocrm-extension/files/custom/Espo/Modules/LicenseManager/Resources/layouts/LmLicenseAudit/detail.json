@@ -1,0 +1,44 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [
+                {
+                    "name": "at"
+                },
+                {
+                    "name": "action"
+                }
+            ],
+            [
+                {
+                    "name": "actorName"
+                },
+                {
+                    "name": "actorType"
+                }
+            ],
+            [
+                {
+                    "name": "license"
+                },
+                {
+                    "name": "productIdentifier"
+                }
+            ],
+            [
+                {
+                    "name": "ipAddress"
+                },
+                {
+                    "name": "seq"
+                }
+            ],
+            [
+                {
+                    "name": "details"
+                }
+            ]
+        ]
+    }
+]

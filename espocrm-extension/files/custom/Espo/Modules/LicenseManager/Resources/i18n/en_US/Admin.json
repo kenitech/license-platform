@@ -1,0 +1,8 @@
+{
+    "labels": {
+        "License Manager": "License Manager"
+    },
+    "descriptions": {
+        "licenseManager": "Connection to the license server, audit chain status and synchronization."
+    }
+}

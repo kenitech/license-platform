@@ -1,0 +1,14 @@
+{
+  "name": "license-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "License Manager Platform: license server, client SDK and EspoCRM extension",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check-only"
+  },
+  "license": "UNLICENSED"
+}

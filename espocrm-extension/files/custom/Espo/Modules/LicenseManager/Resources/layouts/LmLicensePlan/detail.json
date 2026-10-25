@@ -1,0 +1,94 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [
+                {
+                    "name": "application"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "planCode"
+                }
+            ],
+            [
+                {
+                    "name": "licenseType"
+                },
+                {
+                    "name": "renewalPolicy"
+                }
+            ],
+            [
+                {
+                    "name": "durationValue"
+                },
+                {
+                    "name": "durationUnit"
+                }
+            ],
+            [
+                {
+                    "name": "maxDevices"
+                },
+                {
+                    "name": "price"
+                }
+            ],
+            [
+                {
+                    "name": "transferPolicy"
+                },
+                {
+                    "name": "transfersPerYear"
+                }
+            ],
+            [
+                {
+                    "name": "offlineGracePeriod"
+                },
+                {
+                    "name": "paymentGracePeriod"
+                }
+            ],
+            [
+                {
+                    "name": "entitlements"
+                },
+                {
+                    "name": "hasLicenses"
+                }
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ]
+    },
+    {
+        "label": "License Server",
+        "rows": [
+            [
+                {
+                    "name": "syncStatus"
+                },
+                {
+                    "name": "lastSyncedAt"
+                }
+            ],
+            [
+                {
+                    "name": "syncMessage"
+                }
+            ]
+        ]
+    }
+]

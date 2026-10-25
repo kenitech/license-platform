@@ -1,0 +1,15 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "operatingSystem"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "lastSeenAt"
+    }
+]

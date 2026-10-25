@@ -1,0 +1,20 @@
+{
+    "params": {
+        "licenseManagerServerUrl": {
+            "level": "admin"
+        },
+        "licenseManagerClientId": {
+            "level": "admin"
+        },
+        "licenseManagerClientSecret": {
+            "level": "system",
+            "internal": true
+        },
+        "licenseManagerIssueRequires": {
+            "level": "admin"
+        },
+        "licenseManagerTimeout": {
+            "level": "admin"
+        }
+    }
+}

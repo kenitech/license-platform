@@ -1,0 +1,141 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 200
+        },
+        "productIdentifier": {
+            "type": "varchar",
+            "required": true,
+            "maxLength": 64,
+            "pattern": "^[a-z0-9][a-z0-9._\\-]{1,63}$",
+            "tooltip": true,
+            "index": true
+        },
+        "currentVersion": {
+            "type": "varchar",
+            "maxLength": 50
+        },
+        "supportedOperatingSystems": {
+            "type": "multiEnum",
+            "options": [
+                "Windows",
+                "macOS",
+                "Linux",
+                "Android",
+                "iOS",
+                "Web"
+            ],
+            "allowCustomOptions": true
+        },
+        "offlinePolicy": {
+            "type": "enum",
+            "options": [
+                "perpetual",
+                "periodic"
+            ],
+            "default": "perpetual",
+            "tooltip": true
+        },
+        "offlineCheckDays": {
+            "type": "int",
+            "min": 1,
+            "max": 365,
+            "tooltip": true
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "Active",
+                "Archived"
+            ],
+            "default": "Active",
+            "style": {
+                "Archived": "default",
+                "Active": "success"
+            }
+        },
+        "description": {
+            "type": "text"
+        },
+        "syncStatus": {
+            "type": "enum",
+            "options": [
+                "Pending",
+                "Synced",
+                "Error"
+            ],
+            "default": "Pending",
+            "readOnly": true,
+            "style": {
+                "Pending": "warning",
+                "Synced": "success",
+                "Error": "danger"
+            }
+        },
+        "syncMessage": {
+            "type": "text",
+            "readOnly": true
+        },
+        "lastSyncedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true,
+            "view": "views/fields/user"
+        }
+    },
+    "links": {
+        "plans": {
+            "type": "hasMany",
+            "entity": "LmLicensePlan",
+            "foreign": "application"
+        },
+        "licenses": {
+            "type": "hasMany",
+            "entity": "LmLicense",
+            "foreign": "application"
+        },
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        }
+    },
+    "collection": {
+        "orderBy": "name",
+        "order": "asc",
+        "textFilterFields": [
+            "name",
+            "productIdentifier"
+        ]
+    },
+    "indexes": {
+        "productIdentifier": {
+            "unique": true,
+            "columns": [
+                "productIdentifier",
+                "deleted"
+            ]
+        }
+    }
+}

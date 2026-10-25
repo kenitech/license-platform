@@ -1,0 +1,241 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 20,
+            "tooltip": true
+        },
+        "serverId": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 36,
+            "index": true,
+            "layoutAvailabilityList": []
+        },
+        "status": {
+            "type": "enum",
+            "options": [
+                "active",
+                "available",
+                "past_due",
+                "expired",
+                "suspended",
+                "revoked",
+                "cancelled"
+            ],
+            "readOnly": true,
+            "style": {
+                "active": "success",
+                "available": "primary",
+                "past_due": "warning",
+                "expired": "default",
+                "suspended": "warning",
+                "revoked": "danger",
+                "cancelled": "default"
+            }
+        },
+        "statusReason": {
+            "type": "text",
+            "readOnly": true
+        },
+        "application": {
+            "type": "link",
+            "readOnly": true
+        },
+        "plan": {
+            "type": "link",
+            "readOnly": true
+        },
+        "productIdentifier": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 64
+        },
+        "planCode": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 64
+        },
+        "licenseType": {
+            "type": "enum",
+            "options": [
+                "lifetime",
+                "fixed_term",
+                "trial",
+                "subscription"
+            ],
+            "readOnly": true
+        },
+        "keyLast4": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 4,
+            "tooltip": true
+        },
+        "account": {
+            "type": "link",
+            "readOnly": true
+        },
+        "contact": {
+            "type": "link",
+            "readOnly": true
+        },
+        "order": {
+            "type": "link",
+            "readOnly": true
+        },
+        "orderItemId": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 64,
+            "layoutAvailabilityList": []
+        },
+        "grantReason": {
+            "type": "text",
+            "readOnly": true
+        },
+        "maxDevices": {
+            "type": "int",
+            "readOnly": true
+        },
+        "activeDevices": {
+            "type": "int",
+            "readOnly": true
+        },
+        "entitlements": {
+            "type": "array",
+            "readOnly": true
+        },
+        "renewalPolicy": {
+            "type": "enum",
+            "options": [
+                "none",
+                "manual",
+                "automatic"
+            ],
+            "readOnly": true
+        },
+        "transferPolicy": {
+            "type": "enum",
+            "options": [
+                "self_service",
+                "limited_per_year",
+                "support_only",
+                "not_transferable"
+            ],
+            "readOnly": true
+        },
+        "transfersPerYear": {
+            "type": "int",
+            "readOnly": true
+        },
+        "transfersUsedThisYear": {
+            "type": "int",
+            "readOnly": true
+        },
+        "issuedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "startsAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "expiresAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "validUntil": {
+            "type": "datetime",
+            "readOnly": true,
+            "tooltip": true
+        },
+        "autoRenew": {
+            "type": "bool",
+            "readOnly": true
+        },
+        "cancelAtPeriodEnd": {
+            "type": "bool",
+            "readOnly": true
+        },
+        "cancelledAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "serverRev": {
+            "type": "int",
+            "readOnly": true,
+            "layoutAvailabilityList": []
+        },
+        "syncStatus": {
+            "type": "enum",
+            "options": [
+                "Synced",
+                "Missing on server"
+            ],
+            "default": "Synced",
+            "readOnly": true,
+            "style": {
+                "Missing on server": "danger"
+            }
+        },
+        "lastSyncedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        }
+    },
+    "links": {
+        "application": {
+            "type": "belongsTo",
+            "entity": "LmApplication",
+            "foreign": "licenses"
+        },
+        "plan": {
+            "type": "belongsTo",
+            "entity": "LmLicensePlan",
+            "foreign": "licenses"
+        },
+        "account": {
+            "type": "belongsTo",
+            "entity": "Account",
+            "foreign": "lmLicenses"
+        },
+        "contact": {
+            "type": "belongsTo",
+            "entity": "Contact",
+            "foreign": "lmLicenses"
+        },
+        "order": {
+            "type": "belongsTo",
+            "entity": "LmLicenseOrder",
+            "foreign": "licenses"
+        },
+        "deviceActivations": {
+            "type": "hasMany",
+            "entity": "LmDeviceActivation",
+            "foreign": "license"
+        },
+        "auditEntries": {
+            "type": "hasMany",
+            "entity": "LmLicenseAudit",
+            "foreign": "license"
+        }
+    },
+    "collection": {
+        "orderBy": "issuedAt",
+        "order": "desc",
+        "textFilterFields": [
+            "name",
+            "keyLast4"
+        ]
+    }
+}

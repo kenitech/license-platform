@@ -1,0 +1,10 @@
+{
+    "links": {
+        "lmLicenses": "Licenses",
+        "lmLicenseOrders": "License Orders",
+        "lmDeviceActivations": "Device Activations"
+    },
+    "labels": {
+        "Licensing": "Licensing"
+    }
+}

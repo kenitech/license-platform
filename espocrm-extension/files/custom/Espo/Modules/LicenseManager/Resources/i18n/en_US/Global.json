@@ -1,0 +1,28 @@
+{
+    "scopeNames": {
+        "LmApplication": "Application",
+        "LmLicensePlan": "License Plan",
+        "LmLicenseOrder": "License Order",
+        "LmOrderItem": "Purchased Product",
+        "LmLicense": "License",
+        "LmDeviceActivation": "Device Activation",
+        "LmLicenseAudit": "License Audit",
+        "LicenseOperations": "License Operations"
+    },
+    "scopeNamesPlural": {
+        "LmApplication": "Applications",
+        "LmLicensePlan": "License Plans",
+        "LmLicenseOrder": "License Orders",
+        "LmOrderItem": "Purchased Products",
+        "LmLicense": "Licenses",
+        "LmDeviceActivation": "Device Activations",
+        "LmLicenseAudit": "License Audit",
+        "LicenseOperations": "License Operations"
+    },
+    "dashlets": {
+        "LicenseSummary": "License Summary"
+    },
+    "labels": {
+        "Licensing": "Licensing"
+    }
+}

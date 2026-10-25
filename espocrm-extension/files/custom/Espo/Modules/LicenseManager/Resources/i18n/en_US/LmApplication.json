@@ -1,0 +1,38 @@
+{
+    "labels": {
+        "Create LmApplication": "Register Application",
+        "Sync to License Server": "Sync to License Server"
+    },
+    "fields": {
+        "name": "Application Name",
+        "productIdentifier": "Product Identifier",
+        "currentVersion": "Current Version",
+        "supportedOperatingSystems": "Supported Operating Systems",
+        "offlinePolicy": "Offline Policy",
+        "offlineCheckDays": "Confirm Online Every (days)",
+        "status": "Status",
+        "description": "Description",
+        "syncStatus": "Sync Status",
+        "syncMessage": "Sync Message",
+        "lastSyncedAt": "Last Synced"
+    },
+    "links": {
+        "plans": "License Plans",
+        "licenses": "Licenses"
+    },
+    "options": {
+        "offlinePolicy": {
+            "perpetual": "Perpetual",
+            "periodic": "Confirm online every N days"
+        },
+        "status": {
+            "Active": "Active",
+            "Archived": "Archived"
+        }
+    },
+    "tooltips": {
+        "productIdentifier": "Written into every license and can never be changed. Lowercase letters, digits, \".\", \"-\" and \"_\", for example acme-editor. Give the same value to your developers.",
+        "offlinePolicy": "Perpetual: activated computers never need to go online again. Periodic: computers must confirm online every N days.",
+        "offlineCheckDays": "How often an activated computer must reach the license server."
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "primaryFilterClassNameMap": {
+        "active": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmDeviceActivation\\PrimaryFilters\\Active",
+        "released": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmDeviceActivation\\PrimaryFilters\\Released"
+    }
+}

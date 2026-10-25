@@ -1,0 +1,63 @@
+{
+    "controller": "controllers/record",
+    "iconClass": "fas fa-cube",
+    "menu": {
+        "list": {
+            "buttons": []
+        }
+    },
+    "detailActionList": [
+        {
+            "name": "syncToServer",
+            "label": "Sync to License Server",
+            "handler": "license-manager:handlers/sync-actions",
+            "actionFunction": "syncApplication",
+            "checkVisibilityFunction": "isVisible"
+        }
+    ],
+    "relationshipPanels": {
+        "plans": {
+            "create": true,
+            "select": false
+        },
+        "licenses": {
+            "create": false,
+            "select": false,
+            "rowActionsView": "views/record/row-actions/view-only"
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "offlineCheckDays": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "offlinePolicy",
+                            "value": "periodic"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "offlinePolicy",
+                            "value": "periodic"
+                        }
+                    ]
+                }
+            },
+            "productIdentifier": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

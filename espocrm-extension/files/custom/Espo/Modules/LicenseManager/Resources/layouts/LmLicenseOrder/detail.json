@@ -1,0 +1,50 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "orderDate"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "contact"
+                }
+            ],
+            [
+                {
+                    "name": "salesChannel"
+                },
+                {
+                    "name": "amount"
+                }
+            ],
+            [
+                {
+                    "name": "paymentStatus"
+                },
+                {
+                    "name": "administrativeApproval"
+                }
+            ],
+            [
+                {
+                    "name": "issuanceStatus"
+                },
+                false
+            ],
+            [
+                {
+                    "name": "description"
+                }
+            ]
+        ]
+    }
+]

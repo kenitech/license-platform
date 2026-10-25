@@ -1,0 +1,7 @@
+{
+    "fields": {
+        "licenseManagerServerUrl": "License Server URL",
+        "licenseManagerClientId": "License Server Client ID",
+        "licenseManagerIssueRequires": "Issue Licenses When"
+    }
+}

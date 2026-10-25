@@ -1,0 +1,14 @@
+{
+    "controller": "controllers/record",
+    "iconClass": "fas fa-clipboard-list",
+    "createDisabled": true,
+    "editDisabled": true,
+    "mergeDisabled": true,
+    "massUpdateDisabled": true,
+    "removeDisabled": true,
+    "duplicateDisabled": true,
+    "inlineEditDisabled": true,
+    "filterList": [
+        "failures"
+    ]
+}

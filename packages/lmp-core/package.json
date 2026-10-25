@@ -1,0 +1,11 @@
+{
+  "name": "@lmp/core",
+  "version": "1.0.0",
+  "description": "License Manager Platform: shared key, token and signing primitives (no dependencies)",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": "./src/index.js",
+  "engines": { "node": ">=22.13" },
+  "license": "UNLICENSED",
+  "private": true
+}

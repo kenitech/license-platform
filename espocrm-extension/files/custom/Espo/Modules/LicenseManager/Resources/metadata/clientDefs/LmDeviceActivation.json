@@ -1,0 +1,31 @@
+{
+    "controller": "controllers/record",
+    "iconClass": "fas fa-laptop",
+    "createDisabled": true,
+    "editDisabled": true,
+    "mergeDisabled": true,
+    "massUpdateDisabled": true,
+    "removeDisabled": true,
+    "duplicateDisabled": true,
+    "inlineEditDisabled": true,
+    "detailActionList": [
+        {
+            "name": "lmAssistedTransfer",
+            "label": "Assisted Transfer",
+            "handler": "license-manager:handlers/activation-actions",
+            "actionFunction": "assistedTransfer",
+            "checkVisibilityFunction": "isVisible"
+        },
+        {
+            "name": "lmReleaseDevice",
+            "label": "Release Device",
+            "handler": "license-manager:handlers/activation-actions",
+            "actionFunction": "releaseDevice",
+            "checkVisibilityFunction": "isVisible"
+        }
+    ],
+    "filterList": [
+        "active",
+        "released"
+    ]
+}

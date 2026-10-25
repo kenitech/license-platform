@@ -1,0 +1,18 @@
+[Unit]
+Description=License Manager Platform database backup
+After=lmp-license-server.service
+
+[Service]
+Type=oneshot
+User=lmp
+Group=lmp
+WorkingDirectory=/opt/lmp/license-server
+EnvironmentFile=/etc/lmp/license-server.env
+ExecStart=/usr/bin/env node /opt/lmp/license-server/bin/backup.js create
+UMask=0027
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/var/lib/lmp /var/backups/lmp
+ReadOnlyPaths=/etc/lmp

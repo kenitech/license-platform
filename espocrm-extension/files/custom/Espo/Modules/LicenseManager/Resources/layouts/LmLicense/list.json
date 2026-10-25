@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "account"
+    },
+    {
+        "name": "plan"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "keyLast4"
+    },
+    {
+        "name": "activeDevices"
+    },
+    {
+        "name": "expiresAt"
+    }
+]

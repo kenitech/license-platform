@@ -1,0 +1,113 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 100
+        },
+        "seq": {
+            "type": "int",
+            "readOnly": true,
+            "index": true
+        },
+        "at": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "action": {
+            "type": "enum",
+            "options": [
+                "license_issued",
+                "activated",
+                "reactivated_same_device",
+                "activation_failed",
+                "trial_started",
+                "trial_denied",
+                "device_released",
+                "license_suspended",
+                "license_reactivated",
+                "license_revoked",
+                "license_extended",
+                "license_renewed",
+                "subscription_cancelled",
+                "license_key_replaced",
+                "license_recovered",
+                "devices_released",
+                "application_registered",
+                "application_updated",
+                "plan_created",
+                "plan_updated",
+                "database_restored"
+            ],
+            "readOnly": true,
+            "style": {
+                "activation_failed": "danger",
+                "trial_denied": "danger",
+                "license_revoked": "danger",
+                "license_suspended": "warning",
+                "database_restored": "warning"
+            }
+        },
+        "actorType": {
+            "type": "enum",
+            "options": [
+                "admin",
+                "device",
+                "system"
+            ],
+            "readOnly": true
+        },
+        "actorName": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 200
+        },
+        "license": {
+            "type": "link",
+            "readOnly": true
+        },
+        "licenseReference": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 20
+        },
+        "productIdentifier": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 64
+        },
+        "ipAddress": {
+            "type": "varchar",
+            "readOnly": true,
+            "maxLength": 45
+        },
+        "details": {
+            "type": "text",
+            "readOnly": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        }
+    },
+    "links": {
+        "license": {
+            "type": "belongsTo",
+            "entity": "LmLicense",
+            "foreign": "auditEntries"
+        }
+    },
+    "collection": {
+        "orderBy": "seq",
+        "order": "desc",
+        "textFilterFields": [
+            "licenseReference",
+            "actorName",
+            "ipAddress"
+        ]
+    }
+}

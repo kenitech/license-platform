@@ -1,0 +1,118 @@
+{
+    "controller": "controllers/record",
+    "iconClass": "fas fa-key",
+    "createDisabled": true,
+    "editDisabled": true,
+    "mergeDisabled": true,
+    "massUpdateDisabled": true,
+    "removeDisabled": true,
+    "duplicateDisabled": true,
+    "inlineEditDisabled": true,
+    "menu": {
+        "list": {
+            "buttons": [
+                {
+                    "name": "issueLicenses",
+                    "label": "Issue Licenses",
+                    "style": "primary",
+                    "handler": "license-manager:handlers/license-list-actions",
+                    "actionFunction": "issueLicenses",
+                    "checkVisibilityFunction": "isVisible"
+                }
+            ]
+        }
+    },
+    "detailActionList": [
+        {
+            "name": "lmRefresh",
+            "label": "Refresh from Server",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "refresh",
+            "checkVisibilityFunction": "isRefreshVisible"
+        },
+        {
+            "name": "lmExtend",
+            "label": "Extend",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "extend",
+            "checkVisibilityFunction": "isExtendVisible"
+        },
+        {
+            "name": "lmRenew",
+            "label": "Renew",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "renew",
+            "checkVisibilityFunction": "isRenewVisible"
+        },
+        {
+            "name": "lmCancelSubscription",
+            "label": "Cancel Subscription",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "cancelSubscription",
+            "checkVisibilityFunction": "isCancelVisible"
+        },
+        {
+            "name": "lmSuspend",
+            "label": "Suspend",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "suspend",
+            "checkVisibilityFunction": "isSuspendVisible"
+        },
+        {
+            "name": "lmReactivate",
+            "label": "Reactivate",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "reactivate",
+            "checkVisibilityFunction": "isReactivateVisible"
+        },
+        {
+            "name": "lmRevoke",
+            "label": "Revoke",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "revoke",
+            "checkVisibilityFunction": "isRevokeVisible"
+        },
+        {
+            "name": "lmReplaceKey",
+            "label": "Replace License Key",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "replaceKey",
+            "checkVisibilityFunction": "isOperationVisible"
+        },
+        {
+            "name": "lmRecover",
+            "label": "Recover (Lost Device)",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "recover",
+            "checkVisibilityFunction": "isOperationVisible"
+        },
+        {
+            "name": "lmReleaseAll",
+            "label": "Release All Devices",
+            "handler": "license-manager:handlers/license-actions",
+            "actionFunction": "releaseAll",
+            "checkVisibilityFunction": "isReleaseAllVisible"
+        }
+    ],
+    "filterList": [
+        "active",
+        "available",
+        "expiring",
+        "expired",
+        "suspended",
+        "revoked"
+    ],
+    "relationshipPanels": {
+        "deviceActivations": {
+            "create": false,
+            "select": false,
+            "rowActionsView": "views/record/row-actions/view-only"
+        },
+        "auditEntries": {
+            "create": false,
+            "select": false,
+            "rowActionsView": "views/record/row-actions/view-only",
+            "label": "Audit History"
+        }
+    }
+}

@@ -1,0 +1,101 @@
+{
+    "labels": {
+        "Issue Licenses": "Issue Licenses",
+        "Refresh from Server": "Refresh from Server",
+        "Extend": "Extend",
+        "Renew": "Renew",
+        "Cancel Subscription": "Cancel Subscription",
+        "Suspend": "Suspend",
+        "Reactivate": "Reactivate",
+        "Revoke": "Revoke",
+        "Replace License Key": "Replace License Key",
+        "Recover (Lost Device)": "Recover (Lost Device)",
+        "Release All Devices": "Release All Devices",
+        "License keys": "License keys",
+        "Copy": "Copy",
+        "Download CSV": "Download CSV"
+    },
+    "fields": {
+        "name": "Reference",
+        "status": "Status",
+        "statusReason": "Status Reason",
+        "application": "Application",
+        "plan": "License Plan",
+        "productIdentifier": "Product Identifier",
+        "planCode": "Plan Code",
+        "licenseType": "License Type",
+        "keyLast4": "Key (last 4)",
+        "account": "Customer",
+        "contact": "Contact",
+        "order": "Order",
+        "grantReason": "Administrative Grant Reason",
+        "maxDevices": "Maximum Devices",
+        "activeDevices": "Active Devices",
+        "entitlements": "Entitlements",
+        "renewalPolicy": "Renewal Policy",
+        "transferPolicy": "Transfer Policy",
+        "transfersPerYear": "Transfers per Year",
+        "transfersUsedThisYear": "Transfers Used (12 months)",
+        "issuedAt": "Issued",
+        "startsAt": "Starts",
+        "expiresAt": "Expires",
+        "validUntil": "Works Until",
+        "autoRenew": "Automatic Renewal",
+        "cancelAtPeriodEnd": "Cancels at Period End",
+        "cancelledAt": "Cancelled",
+        "syncStatus": "Sync Status",
+        "lastSyncedAt": "Last Synced",
+        "createdAt": "Created",
+        "modifiedAt": "Modified"
+    },
+    "links": {
+        "deviceActivations": "Device Activations",
+        "auditEntries": "Audit History",
+        "account": "Customer"
+    },
+    "options": {
+        "status": {
+            "active": "Active",
+            "available": "Available",
+            "past_due": "Payment grace",
+            "expired": "Expired",
+            "suspended": "Suspended",
+            "revoked": "Revoked",
+            "cancelled": "Cancelled"
+        },
+        "licenseType": {
+            "lifetime": "Lifetime",
+            "fixed_term": "Fixed Term",
+            "trial": "Trial",
+            "subscription": "Subscription"
+        },
+        "renewalPolicy": {
+            "none": "Not renewable",
+            "manual": "Manual",
+            "automatic": "Automatic"
+        },
+        "transferPolicy": {
+            "self_service": "Self-service unlimited",
+            "limited_per_year": "Limited per year",
+            "support_only": "Support-assisted only",
+            "not_transferable": "Not transferable"
+        },
+        "syncStatus": {
+            "Synced": "Synced",
+            "Missing on server": "Missing on server"
+        }
+    },
+    "presetFilters": {
+        "active": "Active",
+        "available": "Available",
+        "expiring": "Expiring in 30 days",
+        "expired": "Expired",
+        "suspended": "Suspended",
+        "revoked": "Revoked"
+    },
+    "tooltips": {
+        "name": "Public reference such as LIC-3KE8-WDA1-SQVX. Search by it or by the last 4 characters of the key.",
+        "keyLast4": "License keys are shown once and never stored. Only their last 4 characters are kept for searching.",
+        "validUntil": "End of the term plus the payment grace period, if any."
+    }
+}

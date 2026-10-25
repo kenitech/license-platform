@@ -1,0 +1,24 @@
+[
+    {
+        "name": "name",
+        "link": true
+    },
+    {
+        "name": "application"
+    },
+    {
+        "name": "planCode"
+    },
+    {
+        "name": "licenseType"
+    },
+    {
+        "name": "price"
+    },
+    {
+        "name": "status"
+    },
+    {
+        "name": "syncStatus"
+    }
+]

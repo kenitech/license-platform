@@ -1,0 +1,9 @@
+{
+    "links": {
+        "lmLicenses": {
+            "type": "hasMany",
+            "entity": "LmLicense",
+            "foreign": "contact"
+        }
+    }
+}

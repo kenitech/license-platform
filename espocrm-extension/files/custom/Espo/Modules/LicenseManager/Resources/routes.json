@@ -1,0 +1,52 @@
+[
+    {
+        "route": "/LicenseManager/status",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\GetStatus"
+    },
+    {
+        "route": "/LicenseManager/sync",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostSync"
+    },
+    {
+        "route": "/LicenseManager/summary",
+        "method": "get",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\GetSummary"
+    },
+    {
+        "route": "/LicenseManager/order/:id/issue",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostOrderIssue"
+    },
+    {
+        "route": "/LicenseManager/license/issue",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostLicenseIssue"
+    },
+    {
+        "route": "/LicenseManager/license/:id/refresh",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostLicenseRefresh"
+    },
+    {
+        "route": "/LicenseManager/license/:id/operation/:operation",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostLicenseOperation"
+    },
+    {
+        "route": "/LicenseManager/activation/:id/release",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostActivationRelease"
+    },
+    {
+        "route": "/LicenseManager/application/:id/push",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostApplicationPush"
+    },
+    {
+        "route": "/LicenseManager/plan/:id/push",
+        "method": "post",
+        "actionClassName": "Espo\\Modules\\LicenseManager\\Api\\PostPlanPush"
+    }
+]

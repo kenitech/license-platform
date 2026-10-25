@@ -1,0 +1,195 @@
+{
+    "controller": "controllers/record",
+    "iconClass": "fas fa-tags",
+    "detailActionList": [
+        {
+            "name": "syncToServer",
+            "label": "Sync to License Server",
+            "handler": "license-manager:handlers/sync-actions",
+            "actionFunction": "syncPlan",
+            "checkVisibilityFunction": "isVisible"
+        }
+    ],
+    "relationshipPanels": {
+        "licenses": {
+            "create": false,
+            "select": false,
+            "rowActionsView": "views/record/row-actions/view-only"
+        }
+    },
+    "dynamicLogic": {
+        "fields": {
+            "durationValue": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "licenseType",
+                            "value": "lifetime"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "licenseType",
+                            "value": "lifetime"
+                        }
+                    ]
+                }
+            },
+            "durationUnit": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "licenseType",
+                            "value": "lifetime"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "licenseType",
+                            "value": "lifetime"
+                        }
+                    ]
+                }
+            },
+            "renewalPolicy": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "notEquals",
+                            "attribute": "licenseType",
+                            "value": "lifetime"
+                        }
+                    ]
+                }
+            },
+            "transfersPerYear": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "transferPolicy",
+                            "value": "limited_per_year"
+                        }
+                    ]
+                },
+                "required": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "transferPolicy",
+                            "value": "limited_per_year"
+                        }
+                    ]
+                }
+            },
+            "offlineGracePeriod": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "licenseType",
+                            "value": [
+                                "fixed_term",
+                                "subscription"
+                            ]
+                        }
+                    ]
+                }
+            },
+            "paymentGracePeriod": {
+                "visible": {
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "licenseType",
+                            "value": "subscription"
+                        }
+                    ]
+                }
+            },
+            "planCode": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            },
+            "application": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isNotEmpty",
+                            "attribute": "id"
+                        }
+                    ]
+                }
+            },
+            "licenseType": {
+                "readOnly": {
+                    "conditionGroup": [
+                        {
+                            "type": "isTrue",
+                            "attribute": "hasLicenses"
+                        }
+                    ]
+                }
+            }
+        },
+        "options": {
+            "renewalPolicy": [
+                {
+                    "optionList": [
+                        "none"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "in",
+                            "attribute": "licenseType",
+                            "value": [
+                                "lifetime",
+                                "trial"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "none",
+                        "manual"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "licenseType",
+                            "value": "fixed_term"
+                        }
+                    ]
+                },
+                {
+                    "optionList": [
+                        "manual",
+                        "automatic"
+                    ],
+                    "conditionGroup": [
+                        {
+                            "type": "equals",
+                            "attribute": "licenseType",
+                            "value": "subscription"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

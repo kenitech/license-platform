@@ -1,0 +1,53 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "license"
+                },
+                {
+                    "name": "account"
+                }
+            ],
+            [
+                {
+                    "name": "operatingSystem"
+                },
+                {
+                    "name": "appVersion"
+                }
+            ],
+            [
+                {
+                    "name": "activatedAt"
+                },
+                {
+                    "name": "lastSeenAt"
+                }
+            ],
+            [
+                {
+                    "name": "releasedAt"
+                },
+                {
+                    "name": "releaseKind"
+                }
+            ],
+            [
+                {
+                    "name": "deviceFingerprint"
+                },
+                false
+            ]
+        ]
+    }
+]

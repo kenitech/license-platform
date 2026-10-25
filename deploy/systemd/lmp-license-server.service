@@ -1,0 +1,43 @@
+[Unit]
+Description=License Manager Platform license server
+Documentation=file:///opt/lmp/docs/OPERATIONS.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=lmp
+Group=lmp
+WorkingDirectory=/opt/lmp/license-server
+EnvironmentFile=/etc/lmp/license-server.env
+ExecStart=/usr/bin/env node /opt/lmp/license-server/bin/server.js
+# The Let's Encrypt hook runs "systemctl reload": the server switches to the
+# new certificate without dropping connections.
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+RestartSec=5
+# Lets the unprivileged lmp user listen on port 443.
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+UMask=0027
+
+# Hardening
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+RestrictRealtime=true
+RestrictNamespaces=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+SystemCallArchitectures=native
+ReadWritePaths=/var/lib/lmp
+ReadOnlyPaths=/etc/lmp
+
+[Install]
+WantedBy=multi-user.target

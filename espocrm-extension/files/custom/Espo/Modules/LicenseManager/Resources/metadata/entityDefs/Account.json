@@ -1,0 +1,19 @@
+{
+    "links": {
+        "lmLicenses": {
+            "type": "hasMany",
+            "entity": "LmLicense",
+            "foreign": "account"
+        },
+        "lmLicenseOrders": {
+            "type": "hasMany",
+            "entity": "LmLicenseOrder",
+            "foreign": "account"
+        },
+        "lmDeviceActivations": {
+            "type": "hasMany",
+            "entity": "LmDeviceActivation",
+            "foreign": "account"
+        }
+    }
+}

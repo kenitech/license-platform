@@ -1,0 +1,31 @@
+[
+    {
+        "label": "",
+        "rows": [
+            [
+                {
+                    "name": "order"
+                },
+                {
+                    "name": "plan"
+                }
+            ],
+            [
+                {
+                    "name": "quantity"
+                },
+                {
+                    "name": "unitPrice"
+                }
+            ],
+            [
+                {
+                    "name": "amount"
+                },
+                {
+                    "name": "issuedCount"
+                }
+            ]
+        ]
+    }
+]

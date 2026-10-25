@@ -1,0 +1,118 @@
+[
+    {
+        "label": "Overview",
+        "rows": [
+            [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "status"
+                }
+            ],
+            [
+                {
+                    "name": "account"
+                },
+                {
+                    "name": "contact"
+                }
+            ],
+            [
+                {
+                    "name": "application"
+                },
+                {
+                    "name": "plan"
+                }
+            ],
+            [
+                {
+                    "name": "licenseType"
+                },
+                {
+                    "name": "keyLast4"
+                }
+            ],
+            [
+                {
+                    "name": "issuedAt"
+                },
+                {
+                    "name": "expiresAt"
+                }
+            ],
+            [
+                {
+                    "name": "activeDevices"
+                },
+                {
+                    "name": "maxDevices"
+                }
+            ],
+            [
+                {
+                    "name": "entitlements"
+                },
+                {
+                    "name": "validUntil"
+                }
+            ],
+            [
+                {
+                    "name": "statusReason"
+                }
+            ]
+        ]
+    },
+    {
+        "label": "Terms",
+        "rows": [
+            [
+                {
+                    "name": "renewalPolicy"
+                },
+                {
+                    "name": "autoRenew"
+                }
+            ],
+            [
+                {
+                    "name": "transferPolicy"
+                },
+                {
+                    "name": "cancelAtPeriodEnd"
+                }
+            ],
+            [
+                {
+                    "name": "transfersPerYear"
+                },
+                {
+                    "name": "transfersUsedThisYear"
+                }
+            ],
+            [
+                {
+                    "name": "order"
+                },
+                {
+                    "name": "grantReason"
+                }
+            ]
+        ]
+    },
+    {
+        "label": "License Server",
+        "rows": [
+            [
+                {
+                    "name": "syncStatus"
+                },
+                {
+                    "name": "lastSyncedAt"
+                }
+            ]
+        ]
+    }
+]

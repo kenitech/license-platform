@@ -1,0 +1,9 @@
+{
+    "name": "License Manager",
+    "version": "1.0.1",
+    "acceptableVersions": [">=9.0.0"],
+    "php": [">=8.2"],
+    "releaseDate": "2026-10-26",
+    "author": "License Manager Platform",
+    "description": "Sell and manage software licenses from EspoCRM: applications, plans, orders, licenses, device activations and audit, enforced by the License Manager license server."
+}

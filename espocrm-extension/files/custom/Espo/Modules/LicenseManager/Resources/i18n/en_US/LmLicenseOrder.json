@@ -1,0 +1,55 @@
+{
+    "labels": {
+        "Create LmLicenseOrder": "Create Order",
+        "Issue Licenses": "Issue Licenses"
+    },
+    "fields": {
+        "name": "Order Reference",
+        "account": "Customer",
+        "contact": "Contact",
+        "orderDate": "Order Date",
+        "salesChannel": "Sales Channel",
+        "amount": "Amount",
+        "paymentStatus": "Payment Status",
+        "administrativeApproval": "Administrative Approval",
+        "issuanceStatus": "License Issuance",
+        "assignedUser": "Assigned User",
+        "teams": "Teams",
+        "description": "Description"
+    },
+    "links": {
+        "items": "Purchased Products",
+        "licenses": "Licenses",
+        "account": "Customer",
+        "contact": "Contact"
+    },
+    "options": {
+        "salesChannel": {
+            "Direct": "Direct",
+            "Website": "Website",
+            "Reseller": "Reseller",
+            "Marketplace": "Marketplace",
+            "Other": "Other"
+        },
+        "paymentStatus": {
+            "Pending": "Pending",
+            "Paid": "Paid",
+            "Refunded": "Refunded",
+            "Failed": "Failed"
+        },
+        "administrativeApproval": {
+            "None": "None",
+            "Approved": "Approved",
+            "Rejected": "Rejected"
+        },
+        "issuanceStatus": {
+            "Not Issued": "Not Issued",
+            "Partially Issued": "Partially Issued",
+            "Issued": "Issued"
+        }
+    },
+    "tooltips": {
+        "name": "A unique reference such as the invoice or web shop order number.",
+        "administrativeApproval": "Lets someone with License Operations allow issuing before payment arrives."
+    }
+}

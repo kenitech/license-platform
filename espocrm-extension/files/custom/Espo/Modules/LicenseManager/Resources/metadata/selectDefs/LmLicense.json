@@ -1,0 +1,10 @@
+{
+    "primaryFilterClassNameMap": {
+        "active": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicense\\PrimaryFilters\\Active",
+        "available": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicense\\PrimaryFilters\\Available",
+        "expiring": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicense\\PrimaryFilters\\Expiring",
+        "expired": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicense\\PrimaryFilters\\Expired",
+        "suspended": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicense\\PrimaryFilters\\Suspended",
+        "revoked": "Espo\\Modules\\LicenseManager\\Classes\\Select\\LmLicense\\PrimaryFilters\\Revoked"
+    }
+}

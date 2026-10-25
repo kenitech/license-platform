@@ -1,0 +1,21 @@
+[
+    {
+        "label": "",
+        "rows": [
+            [
+                {
+                    "name": "plan"
+                },
+                {
+                    "name": "quantity"
+                }
+            ],
+            [
+                {
+                    "name": "unitPrice"
+                },
+                false
+            ]
+        ]
+    }
+]

@@ -1,0 +1,68 @@
+{
+    "labels": {
+        "Create LmLicensePlan": "Create License Plan",
+        "Sync to License Server": "Sync to License Server"
+    },
+    "fields": {
+        "name": "Plan Name",
+        "application": "Application",
+        "planCode": "Plan Code",
+        "licenseType": "License Type",
+        "durationValue": "Duration",
+        "durationUnit": "Duration Unit",
+        "renewalPolicy": "Renewal Policy",
+        "maxDevices": "Maximum Devices",
+        "price": "Price",
+        "transferPolicy": "Transfer Policy",
+        "transfersPerYear": "Transfers per Year",
+        "offlineGracePeriod": "Offline Grace Period (days)",
+        "paymentGracePeriod": "Payment Grace Period (days)",
+        "entitlements": "Entitlements",
+        "status": "Status",
+        "hasLicenses": "Has Licenses",
+        "description": "Description",
+        "syncStatus": "Sync Status",
+        "syncMessage": "Sync Message",
+        "lastSyncedAt": "Last Synced"
+    },
+    "links": {
+        "application": "Application",
+        "licenses": "Licenses",
+        "orderItems": "Order Lines"
+    },
+    "options": {
+        "licenseType": {
+            "lifetime": "Lifetime",
+            "fixed_term": "Fixed Term",
+            "trial": "Trial",
+            "subscription": "Subscription"
+        },
+        "renewalPolicy": {
+            "none": "Not renewable",
+            "manual": "Manual",
+            "automatic": "Automatic"
+        },
+        "transferPolicy": {
+            "self_service": "Self-service unlimited",
+            "limited_per_year": "Limited per year",
+            "support_only": "Support-assisted only",
+            "not_transferable": "Not transferable"
+        },
+        "durationUnit": {
+            "days": "Days",
+            "months": "Months",
+            "years": "Years"
+        },
+        "status": {
+            "Active": "Active",
+            "Archived": "Archived"
+        }
+    },
+    "tooltips": {
+        "planCode": "Permanent code such as pro-lifetime. Locked once licenses exist.",
+        "offlineGracePeriod": "How long the application keeps working offline after the end of the term while it cannot confirm a renewal.",
+        "paymentGracePeriod": "Days a subscription keeps working after the paid period ends, while payment is awaited.",
+        "entitlements": "Feature codes such as pro, agreed with your developers.",
+        "hasLicenses": "Licenses exist for this plan: its type and code are locked. Create a new plan and archive this one to change them."
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "view": "license-manager:views/dashlets/license-summary",
+    "aclScope": "LmLicense",
+    "options": {
+        "fields": {
+            "title": {
+                "type": "varchar",
+                "required": true
+            },
+            "autorefreshInterval": {
+                "type": "enumFloat",
+                "options": [
+                    0,
+                    0.5,
+                    1,
+                    2,
+                    5,
+                    10
+                ]
+            }
+        },
+        "defaults": {
+            "autorefreshInterval": 5
+        },
+        "layout": [
+            {
+                "rows": [
+                    [
+                        {
+                            "name": "title"
+                        }
+                    ],
+                    [
+                        {
+                            "name": "autorefreshInterval"
+                        }
+                    ]
+                ]
+            }
+        ]
+    }
+}

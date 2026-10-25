@@ -1,0 +1,13 @@
+{
+  "name": "@lmp/license-server",
+  "version": "1.0.0",
+  "description": "License Manager Platform: license server (Node.js 22.13+, no npm dependencies)",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node bin/server.js",
+    "test": "node --test ../test/"
+  },
+  "license": "UNLICENSED"
+}

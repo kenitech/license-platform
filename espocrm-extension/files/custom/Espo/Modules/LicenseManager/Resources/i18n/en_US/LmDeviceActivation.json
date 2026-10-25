@@ -1,0 +1,44 @@
+{
+    "labels": {
+        "Assisted Transfer": "Assisted Transfer",
+        "Release Device": "Release Device"
+    },
+    "fields": {
+        "name": "Device",
+        "license": "License",
+        "account": "Customer",
+        "status": "Status",
+        "deviceFingerprint": "Device Fingerprint",
+        "operatingSystem": "Operating System",
+        "appVersion": "App Version",
+        "activatedAt": "Activated",
+        "lastSeenAt": "Last Seen",
+        "releasedAt": "Released",
+        "releaseKind": "Released By"
+    },
+    "links": {
+        "license": "License",
+        "account": "Customer"
+    },
+    "options": {
+        "status": {
+            "active": "Active",
+            "released": "Released"
+        },
+        "releaseKind": {
+            "": "",
+            "self_transfer": "Customer (transfer)",
+            "assisted_transfer": "Support (assisted transfer)",
+            "admin_release": "Support (release)",
+            "lost_device": "Support (lost device)",
+            "release_all": "Support (release all)"
+        }
+    },
+    "presetFilters": {
+        "active": "Active",
+        "released": "Released"
+    },
+    "tooltips": {
+        "deviceFingerprint": "A hash of the computer identifier; the computer identifier itself is never sent."
+    }
+}

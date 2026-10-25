@@ -1,0 +1,8 @@
+{
+    "entity": false,
+    "tab": false,
+    "acl": "boolean",
+    "aclPortal": false,
+    "module": "LicenseManager",
+    "customizable": false
+}

@@ -1,0 +1,51 @@
+{
+    "fields": {
+        "name": "Event",
+        "seq": "Sequence",
+        "at": "Time",
+        "action": "Action",
+        "actorType": "Actor Type",
+        "actorName": "By",
+        "license": "License",
+        "licenseReference": "License Reference",
+        "productIdentifier": "Product Identifier",
+        "ipAddress": "IP Address",
+        "details": "Details"
+    },
+    "links": {
+        "license": "License"
+    },
+    "options": {
+        "action": {
+            "license_issued": "License issued",
+            "activated": "Activated",
+            "reactivated_same_device": "Activated again on the same computer",
+            "activation_failed": "Activation failed",
+            "trial_started": "Trial started",
+            "trial_denied": "Trial denied",
+            "device_released": "Device released",
+            "license_suspended": "Suspended",
+            "license_reactivated": "Reactivated",
+            "license_revoked": "Revoked",
+            "license_extended": "Extended",
+            "license_renewed": "Renewed",
+            "subscription_cancelled": "Subscription cancelled",
+            "license_key_replaced": "Key replaced",
+            "license_recovered": "Recovered (lost device)",
+            "devices_released": "All devices released",
+            "application_registered": "Application registered",
+            "application_updated": "Application updated",
+            "plan_created": "Plan created",
+            "plan_updated": "Plan updated",
+            "database_restored": "Database restored"
+        },
+        "actorType": {
+            "admin": "Staff",
+            "device": "Customer device",
+            "system": "System"
+        }
+    },
+    "presetFilters": {
+        "failures": "Failed activations and denied trials"
+    }
+}
