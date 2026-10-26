@@ -21,6 +21,17 @@ npm test             # tests only
 
 The output is `dist/license-platform.zip` (what the administrator guide calls license-platform.zip: server, SDK, deploy files, docs and the extension zip) and `dist/license-manager-<version>.zip` (the EspoCRM extension on its own).
 
+## Install the license server
+
+On a fresh Debian or Ubuntu server whose DNS name already points at it, with ports 80 and 443 open:
+
+```sh
+unzip license-platform.zip && cd license-platform
+sudo ./deploy/install.sh --domain lic.example.com --crm-ip <EspoCRM server IP> --email you@example.com
+```
+
+It installs Node.js 22, creates the `lmp` user, settings, secrets and signing key, gets a Let's Encrypt certificate that renews automatically, starts the services and prints the three EspoCRM `config:set` commands. Running it again with a newer zip updates the code and keeps settings, keys, secrets and data.
+
 ## Documentation
 
 - The **License Manager Administrator Guide** covers installation and daily use.
